@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Take Our Compatability Survey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div class="container">
+
+
+    <div class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">YOUR FRIEND MATCH</h4>
+          </div>
+          <div class="modal-body">
+            <p id ="matchName">NAME</p>
+            <p id ="matchPic">NAME</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <h1> Survey Questions </h1>
+        <hr>
+      </div>
+
+      <div class="col-md-12">
+        <h3>ABOUT YOU</h3>
+        <div class="input-group-md">
+          <h4>Name (REQUIRED)</h4>
+          <input type="text" class="form-control" id="nameInput">
+          <h4>Link to Photo (IMAGE)</h4>
+          <input type="text" class="form-control" id="photoLinkInput">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-12">
+        <hr>
+      </div>
+
+      <div class="col-md-12">
+        <form>
+
+          <div class="form-group col-md-12" id="question1">
+
+            <h3> <strong>Question 1 </strong></h3>
+            <h4>What is the ideal number of calls a couple should exchange in a day?</h4>
+            <div class="col-lg-3">
+              <select class="form-control">
+                    <option> Select An Option </option>
+                    <option value = '1'> 1 (Strongly Disagree) </option>
+                    <option value = '2'> 2 </option>
+                    <option value = '3'> 3</option>
+                    <option value = '4'> 4 </option>
+                    <option value = '5'> 5 (Strongly Agree)</option>
+                  </select>
+            </div>
+
+          </div>
+
+          <div class="form-group col-md-12" id="question2">
+
+            <h3> <strong>Question 2 </strong></h3>
+            <h4>Would you compromise your happiness for the success of the relationship?</h4>
+            <div class="col-lg-3">
+              <select class="form-control">
+                    <option> Select An Option </option>
+                    <option value = '1'> 1 (Strongly Disagree) </option>
+                    <option value = '2'> 2 </option>
+                    <option value = '3'> 3</option>
+                    <option value = '4'> 4 </option>
+                    <option value = '5'> 5 (Strongly Agree)</option>
+                  </select>
+            </div>
+
+          </div>
+
+          <div class="form-group col-md-12" id="question3">
+
+            <h3> <strong>Question 3 </strong></h3>
+            <h4>Can you avoid flirting if someone attractive flirts with you when I’m not around?</h4>
+            <div class="col-lg-3">
+              <select class="form-control">
+                    <option> Select An Option </option>
+                    <option value = '1'> 1 (Strongly Disagree) </option>
+                    <option value = '2'> 2 </option>
+                    <option value = '3'> 3</option>
+                    <option value = '4'> 4 </option>
+                    <option value = '5'> 5 (Strongly Agree)</option>
+                  </select>
+            </div>
+
+          </div>
+
+          <div class="form-group col-md-12" id="question4">
+
+            <h3> <strong>Question 4 </strong></h3>
+            <h4>Do you have to know all of my friends?</h4>
+            <div class="col-lg-3">
+              <select class="form-control">
+                    <option> Select An Option </option>
+                    <option value = '1'> 1 (Strongly Disagree) </option>
+                    <option value = '2'> 2 </option>
+                    <option value = '3'> 3</option>
+                    <option value = '4'> 4 </option>
+                    <option value = '5'> 5 (Strongly Agree)</option>
+                  </select>
+            </div>
+
+          </div>
+
+          <div class="form-group col-md-12" id="question5">
+
+            <h3> <strong> Question 5 </strong></h3>
+            <h4>Do you think past relationship secrets should always be kept hidden?</h4>
+            <div class="col-lg-3">
+              <select class="form-control">
+                    <option> Select An Option </option>
+                    <option value = '1'> 1 (Strongly Disagree) </option>
+                    <option value = '2'> 2 </option>
+                    <option value = '3'> 3</option>
+                    <option value = '4'> 4 </option>
+                    <option value = '5'> 5 (Strongly Agree)</option>
+                  </select>
+            </div>
+
+          </div>
+
+          <div class="form-group col-md-12" id="question6">
+
+            <h3> <strong>Question 6 </strong></h3>
+            <h4>Is it fine for a partner to use the toilet with the door open?</h4>
+            <div class="col-lg-3">
+              <select class="form-control">
+                    <option> Select An Option </option>
+                    <option value = '1'> 1 (Strongly Disagree) </option>
+                    <option value = '2'> 2 </option>
+                    <option value = '3'> 3</option>
+                    <option value = '4'> 4 </option>
+                    <option value = '5'> 5 (Strongly Agree)</option>
+                  </select>
+            </div>
+
+          </div>
+
+          <div class="form-group col-md-12" id="question7">
+
+            <h3> <strong>Question 7 </strong></h3>
+            <h4>Would you feel insecure if I spent a lot of time at work?</h4>
+            <div class="col-lg-3">
+              <select class="form-control">
+                    <option> Select An Option </option>
+                    <option value = '1'> 1 (Strongly Disagree) </option>
+                    <option value = '2'> 2 </option>
+                    <option value = '3'> 3</option>
+                    <option value = '4'> 4 </option>
+                    <option value = '5'> 5 (Strongly Agree)</option>
+                  </select>
+            </div>
+
+          </div>
+
+          <div class="form-group col-md-12" id="question8">
+
+            <h3> <strong>Question 8 </strong></h3>
+            <h4>Is religion important to you?</h4>
+            <div class="col-lg-3">
+              <select class="form-control">
+                    <option> Select An Option </option>
+                    <option value = '1'> 1 (Strongly Disagree) </option>
+                    <option value = '2'> 2 </option>
+                    <option value = '3'> 3</option>
+                    <option value = '4'> 4 </option>
+                    <option value = '5'> 5 (Strongly Agree)</option>
+                  </select>
+            </div>
+
+          </div>
+
+          <div class="form-group col-md-12" id="question9">
+
+            <h3> <strong>Question 9 </strong></h3>
+            <h4>Do you consider yourself a jealous person?</h4>
+            <div class="col-lg-3">
+              <select class="form-control">
+                    <option> Select An Option </option>
+                    <option value = '1'> 1 (Strongly Disagree) </option>
+                    <option value = '2'> 2 </option>
+                    <option value = '3'> 3</option>
+                    <option value = '4'> 4 </option>
+                    <option value = '5'> 5 (Strongly Agree)</option>
+                  </select>
+            </div>
+
+          </div>
+
+          <div class="form-group col-md-12" id="question10">
+
+            <h3> <strong>Question 10 </strong></h3>
+            <h4>How important is family to you?</h4>
+            <div class="col-lg-3">
+              <select class="form-control">
+                    <option> Select An Option </option>
+                    <option value = '1'> 1 (Strongly Disagree) </option>
+                    <option value = '2'> 2 </option>
+                    <option value = '3'> 3</option>
+                    <option value = '4'> 4 </option>
+                    <option value = '5'> 5 (Strongly Agree)</option>
+              </select>
+            </div>
+
+          </div>
+
+
+          <button type="submit" class="btn btn-primary col-md-12 submit">Submit</button>
+
+        </form>
+
+        <div class="col-md-12">
+          <hr>
+        </div>
+
+        <footer class="footer">
+          <div class="container">
+            <p><a href="/api/friends">API Friends List</a> | <a href="/api/github">Github Repo</a></p>
+          </div>
+        </footer>
+
+      </div>
+
+    </div>
+
+  </div>
+  <!-- JAVASCRIPT FOR FRONT END -->
+    <script type="text/javascript">
+    $(".submit").on("click", function(event) {
+          event.preventDefault();
+          let scoreInt =[];
+          let scoreArray =
+                  [
+                    $("#question1 option:selected").val(),
+                    $("#question2 option:selected").val(),
+                    $("#question3 option:selected").val(),
+                    $("#question4 option:selected").val(),
+                    $("#question5 option:selected").val(),
+                    $("#question6 option:selected").val(),
+                    $("#question7 option:selected").val(),
+                    $("#question8 option:selected").val(),
+                    $("#question9 option:selected").val(),
+                    $("#question10 option:selected").val()
+                  ]
+          // Here we grab the form elements
+                let friendMatchInfo = {
+                  name: $("#nameInput").val().trim(),
+                  photo: $("#photoLinkInput").val().trim(),
+                  scores: scoreArray
+                };
+                console.log(friendMatchInfo);
+                $.post("/api/friends", friendMatchInfo,
+                  function(data) {
+                    // If a friend is available... tell user they are booked.
+                    if (data) {
+                      alert("WE got your info!");
+                    }
+                    // If a friend is available... tell user they on the waiting list.
+                    else {
+                      alert("Sorry you have no friends");
+                    }
+                    // // Clear the form when submitting
+                    // $("#nameInput").val("");
+                    // $("#photoLinkInput").val("");
+                    // $(".form-control option").val("");
+                  });
+          });//end submitbutton
+
+        function friendQuery() {
+                var currentURL = window.location.origin;
+                // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
+                $.ajax({ url: currentURL + "/api/friends", method: "GET" })
+                .done(function(friendData) {
+                  // Here we are logging the URL so we have access to it for troubleshooting
+                  console.log("------------------------------------");
+                  console.log("URL: " + currentURL + "/api/friends");
+                  console.log("------------------------------------");
+                  console.log(friendData);
+                  console.log("------------------------------------");
+                  // CREATE LOGIC TO DISPLAY MODAL MATCH AFTER COMPARING SCORES
+                  // <!-- MODAL -->
+                  $('#myModal').on('shown.bs.modal', function() {
+                    $('#myInput').focus()
+                  })
+                });
+          }//end friendQuery
+        friendQuery();
+    </script>
+</body>
+
+</html>
