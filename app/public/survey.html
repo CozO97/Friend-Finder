@@ -257,7 +257,7 @@
     </div>
 
   </div>
-  <!-- JAVASCRIPT FOR FRONT END -->
+  <!-- JAVASCRIPT -->
     <script type="text/javascript">
     $(".submit").on("click", function(event) {
           event.preventDefault();
@@ -275,7 +275,7 @@
                     $("#question9 option:selected").val(),
                     $("#question10 option:selected").val()
                   ]
-          // Here we grab the form elements
+          // Getting values from user entry
                 let friendMatchInfo = {
                   name: $("#nameInput").val().trim(),
                   photo: $("#photoLinkInput").val().trim(),
@@ -284,18 +284,15 @@
                 console.log(friendMatchInfo);
                 $.post("/api/friends", friendMatchInfo,
                   function(data) {
-                    // If a friend is available... tell user they are booked.
+                    
                     if (data) {
                       alert("WE got your info!");
                     }
-                    // If a friend is available... tell user they on the waiting list.
+                    
                     else {
                       alert("Sorry you have no friends");
                     }
-                    // // Clear the form when submitting
-                    // $("#nameInput").val("");
-                    // $("#photoLinkInput").val("");
-                    // $(".form-control option").val("");
+                   
                   });
           });//end submitbutton
 
