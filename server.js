@@ -1,8 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-
+const path = require("path");
 var app = express();
-var port = 8080;
+var port = 4000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -14,8 +14,8 @@ app.use(bodyParser.json({
 }));
 
 
-require("./app/routing/apiRoutes.js"(app));
-require("./app/routing/htmlRoutes.js"(app));
+require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/htmlRoutes.js")(app);
 
 
 app.listen(port, function() {
