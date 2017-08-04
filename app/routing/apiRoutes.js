@@ -1,34 +1,44 @@
-const friendData = require("../data/friends.js");
-const friendMatch = require("../data/match.js");
+var friends = require("../data/friends");
 
-module.exports = function(app){
-    console.log("Loaded API routes!")
-    let friendImage = [];
-    let scoreInt = [];
-
-    app.get("/api/friends", function(req, res){
-        res.json(friendData)
-    })
-    app.get("/api/github", function(req, res){
-        res.json("https://github.com/CozO97/Friend-Finder");
-    })
-
-
-    //POSTS
-    app.post("/api/friends", function(req, res){
-        let addFriend = req.body;
-
-        let addedName = [];
-
-        for(let i = 0; i < addFriend.scores.length; i++) {
-            addFriend.scores[i] = parseInt(addFriend.scores[i])
-            scoreInt = addFriend.scores[i];
-        }
-        friendData.push(addFriend);
-        res.json(addFriend);
-        console.log(addFriend)
-
+//routes
+module.exports = function (app) {
+    app.get("/api/friends", function (req, res) {
+        res.json(friends);
     });
-        
 
-};//module export end
+    app.post("/api/friends", function (req, res) {
+        var bestMatch = {
+            name: "",
+            photo: "",
+            friendDifference: 1000
+        };
+        var userData = req.body;
+        var userScores = userData.scores;
+
+        var totalDifference = 0;
+
+        for (var i = 0; i < friends.length; i++) {
+            console.log(friends[i].name);
+            totalDifference = 0;
+
+            for (var j = 0; j < friends[i].scores[j]; j++) {
+                totalDifference += Math.abs(parseInt(userScores[j]) - parseInt(friends[i].scores[j]));
+
+                if (totalDifference <= bestMatch.friendDifference) {
+                    bestMatch.name = friends[i].name;
+                    bestMatch.photo = friends[i].photo;
+                    bestMatch.friendDifference = totalDifference;
+                }
+            }
+        }
+
+        friends.push(userData);
+        console.log(userData);
+        var match = {
+            bestMatch: bestMatch
+        } 
+        res.json(match);
+        console.log(bestMatch);
+    });
+
+}

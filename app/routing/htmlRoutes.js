@@ -10,15 +10,11 @@ module.exports = function(app){
     //     res.sendFile(path.join(__dirname, "/../public/survey.html"));
     // });
 
-    app.get("/:endpoint?", function(req, res){
-        switch (req.params.endpoint) {
-            case undefined:
-                res.sendFile(path.join(__dirname, "/../public/home.html"));
-                break;
-            case "survey":
-            res.sendFile(path.join(__dirname, "/../public/survey.html"));
-            
+   app.get("/survey", function(req, res) {
+       res.sendFile(path.join(__dirname, "/../public/survey.html"));
+   });
 
-        }
-    })
-}
+   app.use(function(req, res) {
+       res.sendFile(path.join(__dirname, "/../public/home.html"));
+   });
+};
