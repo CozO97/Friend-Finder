@@ -18,6 +18,6 @@ require("./app/routing/apiRoutes.js")(app);
 require("./app/routing/htmlRoutes.js")(app);
 
 
-app.listen(port, function() {
+app.listen(process.env.PORT || 4000, function() {
     console.log("Listening on port " + port);
 })
